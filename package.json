@@ -6,12 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
-    "supabase:login": "npx supabase login",
-    "supabase:link": "npx supabase link",
-    "supabase:push": "npx supabase db push",
-    "supabase:pull": "npx supabase db remote commit",
-    "supabase:studio": "npx supabase studio"
+    "lint": "eslint"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.101.1",
@@ -22,7 +17,6 @@
     "react-dom": "19.2.4"
   },
   "devDependencies": {
-    "@supabase/supabase-js": "^2.101.1",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
@@ -30,7 +24,6 @@
     "babel-plugin-react-compiler": "1.0.0",
     "eslint": "^9",
     "eslint-config-next": "16.2.1",
-    "supabase": "^2.16.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
