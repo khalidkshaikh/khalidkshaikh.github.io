@@ -38,7 +38,8 @@ export const metadata: Metadata = {
   description:
     "AI workflows, vibe-coded apps, and automations that solve real problems. No meetings. No overthinking. Just shipping.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon.png",
+    apple: "/favicon.png",
   },
   openGraph: {
     title: "Khalid Shaikh",
