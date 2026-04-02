@@ -3,14 +3,40 @@
 import { useState } from "react";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { supabase } from "@/lib/supabase";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!supabase) {
+      console.error("Supabase not initialized - credentials missing");
+      alert("Error: Supabase not configured. Please contact the site owner.");
+      return;
+    }
+    
+    setLoading(true);
+    console.log("Submitting to Supabase:", { name: formData.name, email: formData.email, message: formData.message });
+    
+    const { data, error } = await supabase
+      .from("responses")
+      .insert([{ name: formData.name, email: formData.email, message: formData.message }]);
+
+    console.log("Supabase response:", { data, error });
+    
+    if (error) {
+      console.error("Error submitting:", error);
+      alert("Error: " + error.message);
+      setLoading(false);
+      return;
+    }
+
     setSubmitted(true);
+    setLoading(false);
   };
 
   return (
@@ -72,10 +98,11 @@ export default function ContactPage() {
                 </div>
                 <button
                   type="submit"
+                  disabled={loading}
                   className="btn-primary w-full justify-center"
                   style={{ padding: "14px 32px" }}
                 >
-                  Send Message
+                  {loading ? "Sending..." : "Send Message"}
                 </button>
               </form>
             )}
