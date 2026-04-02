@@ -1,12 +1,6 @@
 import { createClient } from "@supabase/supabase-js";
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+const supabaseUrl = "https://taguitvjtruqajdsvffa.supabase.co";
+const supabaseAnonKey = "sb_publishable_dEpXdVrPitFf1dTNUZRB4A__u1mhW2U";
 
-if (!supabaseUrl || !supabaseAnonKey) {
-  console.error("Missing Supabase credentials - please add NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY to your environment");
-}
-
-export const supabase = (supabaseUrl && supabaseAnonKey)
-  ? createClient(supabaseUrl, supabaseAnonKey)
-  : null;
+export const supabase = createClient(supabaseUrl, supabaseAnonKey);
