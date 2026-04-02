@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import Logo from "./Logo";
 
@@ -187,7 +186,7 @@ export default function Footer() {
                     boxShadow: "0 4px 15px rgba(124, 58, 237, 0.4), inset 0 1px 0 rgba(255,255,255,0.1)",
                   }}
                 >
-                  <Image
+                  <img
                     src="/author.png"
                     alt="Khalid Shaikh"
                     width={48}

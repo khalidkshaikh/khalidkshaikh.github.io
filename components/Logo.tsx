@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-
 interface LogoProps {
   size?: number;
   scheme?: "default" | "electric" | "hot" | "cyberpunk" | "gold" | "minimal";
@@ -19,7 +17,7 @@ const schemes = {
 
 export default function Logo({ size = 48, className = "" }: LogoProps) {
   return (
-    <Image 
+    <img 
       src="/ks-logo.png" 
       alt="KS Logo" 
       width={size} 
