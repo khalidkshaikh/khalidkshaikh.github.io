@@ -1,0 +1,53 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ksGradientLarge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="50%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#0ABFBC"/>
+    </linearGradient>
+    <filter id="glowLarge" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="kGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#E0E7FF"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Outer glow ring -->
+  <circle cx="60" cy="60" r="55" stroke="url(#ksGradientLarge)" stroke-width="2" stroke-opacity="0.3" fill="none"/>
+  
+  <!-- Main circle -->
+  <circle cx="60" cy="60" r="50" fill="url(#ksGradientLarge)" filter="url(#glowLarge)"/>
+  
+  <!-- Inner highlight -->
+  <circle cx="60" cy="60" r="45" stroke="white" stroke-width="1" stroke-opacity="0.1" fill="none"/>
+  
+  <!-- K letter - modern design -->
+  <g filter="url(#glowLarge)">
+    <!-- Vertical stem -->
+    <path d="M38 35V85" 
+          stroke="url(#kGradient)" 
+          stroke-width="8" 
+          stroke-linecap="round"/>
+    
+    <!-- Upper diagonal -->
+    <path d="M42 60L72 85" 
+          stroke="url(#kGradient)" 
+          stroke-width="8" 
+          stroke-linecap="round"/>
+    
+    <!-- Lower diagonal -->
+    <path d="M42 60L70 35" 
+          stroke="url(#kGradient)" 
+          stroke-width="8" 
+          stroke-linecap="round"/>
+  </g>
+  
+  <!-- Shine effect -->
+  <ellipse cx="45" cy="42" rx="12" ry="8" fill="white" fill-opacity="0.15" transform="rotate(-30 45 42)"/>
+</svg>

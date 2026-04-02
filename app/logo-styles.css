@@ -1,0 +1,35 @@
+/* Logo Colors - Edit these to change logo appearance */
+.logo-gradient-start { --logo-color-1: #8B5CF6; }
+.logo-gradient-end { --logo-color-2: #0ABFBC; }
+
+/* Change logo colors by adding these classes to parent */
+.logo-scheme-electric .logo-circle {
+  fill: linear-gradient(135deg, #6366F1, #22D3EE);
+}
+
+.logo-scheme-hot .logo-circle {
+  fill: linear-gradient(135deg, #EC4899, #F97316);
+}
+
+.logo-scheme-cyberpunk .logo-circle {
+  fill: linear-gradient(135deg, #00FF88, #FF0080);
+}
+
+.logo-scheme-gold .logo-circle {
+  fill: linear-gradient(135deg, #F59E0B, #EF4444);
+}
+
+.logo-scheme-minimal .logo-circle {
+  fill: #1F2937;
+}
+.logo-scheme-minimal .logo-stroke {
+  stroke: #FFFFFF;
+}
+
+/* White logo with gradient glow (current) */
+.logo-white .logo-circle {
+  fill: linear-gradient(135deg, #8B5CF6, #0ABFBC);
+}
+.logo-white .logo-stroke {
+  stroke: #FFFFFF;
+}
