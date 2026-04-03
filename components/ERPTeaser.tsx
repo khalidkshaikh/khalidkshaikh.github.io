@@ -26,6 +26,8 @@ export default function ERPTeaser() {
   const [visible, setVisible] = useState(false);
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
   const [signups] = useState(47);
 
   useEffect(() => {
@@ -41,13 +43,21 @@ export default function ERPTeaser() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setError("");
     if (!email.trim()) return;
     
-    const { error } = await supabase
+    setLoading(true);
+    
+    const { error: supabaseError } = await supabase
       .from("erp_waitlist")
       .insert([{ email: email.trim() }]);
 
-    if (!error) {
+    setLoading(false);
+    
+    if (supabaseError) {
+      console.error("Supabase error:", supabaseError);
+      setError("Something went wrong. Please try again.");
+    } else {
       setSubmitted(true);
     }
   };
@@ -229,19 +239,25 @@ export default function ERPTeaser() {
                   </div>
                   <button
                     type="submit"
-                    className="w-full py-3 rounded-[10px] text-sm font-bold transition-all duration-200"
+                    disabled={loading}
+                    className="w-full py-3 rounded-[10px] text-sm font-bold transition-all duration-200 disabled:opacity-50"
                     style={{
                       background: "linear-gradient(135deg, #f97316, #ea580c)",
                       color: "#fff",
                       border: "none",
-                      cursor: "pointer",
+                      cursor: loading ? "not-allowed" : "pointer",
                       fontFamily: "var(--font-inter)",
                     }}
-                    onMouseEnter={(e) => { e.currentTarget.style.boxShadow = "0 0 24px rgba(249,115,22,0.4)"; e.currentTarget.style.transform = "translateY(-1px)"; }}
+                    onMouseEnter={(e) => { if (!loading) { e.currentTarget.style.boxShadow = "0 0 24px rgba(249,115,22,0.4)"; e.currentTarget.style.transform = "translateY(-1px)"; }}}
                     onMouseLeave={(e) => { e.currentTarget.style.boxShadow = "none"; e.currentTarget.style.transform = "translateY(0)"; }}
                   >
-                    Join the Waitlist →
+                    {loading ? "Joining..." : "Join the Waitlist →"}
                   </button>
+                  {error && (
+                    <p className="text-center text-[11px]" style={{ color: "#ef4444", fontFamily: "var(--font-inter)" }}>
+                      {error}
+                    </p>
+                  )}
                   <p className="text-center text-[11px]" style={{ color: "var(--color-text-muted)", fontFamily: "var(--font-inter)" }}>
                     No spam. Unsubscribe anytime. Pilot pricing: ₹5,000–₹15,000/month.
                   </p>
