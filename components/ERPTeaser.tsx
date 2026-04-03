@@ -50,13 +50,13 @@ export default function ERPTeaser() {
     
     const { error: supabaseError } = await supabase
       .from("erp_waitlist")
-      .insert([{ email: email.trim() }]);
+      .upsert([{ email: email.trim(), created_at: new Date().toISOString() }], { onConflict: 'email', ignoreDuplicates: true });
 
     setLoading(false);
     
     if (supabaseError) {
       console.error("Supabase error:", supabaseError);
-      setError("Something went wrong. Please try again.");
+      setError(`Error: ${supabaseError.message}`);
     } else {
       setSubmitted(true);
     }
