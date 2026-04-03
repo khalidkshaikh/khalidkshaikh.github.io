@@ -4,12 +4,12 @@ import { useEffect, useRef, useState } from "react";
 
 const stats = [
   {
-    value: 50000,
-    suffix: "+",
-    label: "App Downloads",
+    value: 12,
+    suffix: "",
+    label: "Brands Worked With",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <path d="M12 2a10 10 0 110 20A10 10 0 0112 2z"/>
+        <path d="M12 2a10 10 0 110 20 10 10 0 010-20z"/>
         <path d="M8 12l4 4 4-4M12 8v8"/>
       </svg>
     ),

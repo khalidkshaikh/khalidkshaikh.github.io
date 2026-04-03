@@ -275,7 +275,7 @@ function ProductCard({ product, index }: { product: Product; index: number }) {
         {/* Card Footer */}
         <div className="flex items-center justify-between mt-auto pt-4" style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}>
           <span
-            className="text-[10px] font-bold px-2 py-0.5 rounded-md"
+            className="text-[10px] font-bold px-2 py-0.5 rounded-md whitespace-nowrap"
             style={{
               background: "rgba(255,255,255,0.03)",
               color: "var(--color-text-muted)",
@@ -285,7 +285,7 @@ function ProductCard({ product, index }: { product: Product; index: number }) {
             {product.tech}
           </span>
           <div
-            className="flex items-center gap-1 text-[11px] font-bold transition-all duration-300 group-hover:gap-2"
+            className="flex items-center gap-1 text-[11px] font-bold transition-all duration-300 group-hover:gap-2 whitespace-nowrap"
             style={{ color: product.accentColor }}
           >
             {isComingSoon ? "Waitlist" : product.badge === "Android" ? "Download APK" : "Launch"}

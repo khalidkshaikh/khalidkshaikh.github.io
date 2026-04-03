@@ -8,6 +8,7 @@ import BlogStrip from "@/components/BlogStrip";
 import ERPTeaser from "@/components/ERPTeaser";
 import Footer from "@/components/Footer";
 import ADLCSection from "@/components/ADLCSection";
+import ProjectsShowcase from "@/components/ui/project-showcase";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <AIPulseShowcase />
         <ProductGrid />
         <WhatIBuild />
+        <ProjectsShowcase />
         <ADLCSection />
         <BlogStrip />
         <ERPTeaser />
