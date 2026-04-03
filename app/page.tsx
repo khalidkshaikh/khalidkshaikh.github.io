@@ -1,14 +1,14 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import ProofStrip from "@/components/ProofStrip";
-import AIPulseShowcase from "@/components/AIPulseShowcase";
-import ProductGrid from "@/components/ProductGrid";
 import WhatIBuild from "@/components/WhatIBuild";
+import ProjectsShowcase from "@/components/ui/project-showcase";
+import ProductGrid from "@/components/ProductGrid";
+import AIPulseShowcase from "@/components/AIPulseShowcase";
 import BlogStrip from "@/components/BlogStrip";
 import ERPTeaser from "@/components/ERPTeaser";
 import Footer from "@/components/Footer";
 import ADLCSection from "@/components/ADLCSection";
-import ProjectsShowcase from "@/components/ui/project-showcase";
 
 export default function Home() {
   return (
@@ -17,10 +17,10 @@ export default function Home() {
       <main>
         <Hero />
         <ProofStrip />
-        <AIPulseShowcase />
-        <ProductGrid />
         <WhatIBuild />
         <ProjectsShowcase />
+        <ProductGrid />
+        <AIPulseShowcase />
         <ADLCSection />
         <BlogStrip />
         <ERPTeaser />

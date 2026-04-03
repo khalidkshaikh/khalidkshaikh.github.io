@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { supabase } from "@/lib/supabase";
 
 const painPoints = [
   "Excel-based inventory that breaks every month",
@@ -38,10 +39,17 @@ export default function ERPTeaser() {
     return () => observer.disconnect();
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email.trim()) return;
-    setSubmitted(true);
+    
+    const { error } = await supabase
+      .from("erp_waitlist")
+      .insert([{ email: email.trim() }]);
+
+    if (!error) {
+      setSubmitted(true);
+    }
   };
 
   return (
