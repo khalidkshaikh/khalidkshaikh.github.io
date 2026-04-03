@@ -12,11 +12,11 @@ const pillars = [
     label: "Ship Fast",
     headline: "If it takes more than a weekend, I'm doing it wrong.",
     body:
-      "I vibe code. I use AI to accelerate. I ship tools and automations that solve real problems - without over-engineering. Weekend projects that actually ship.",
+      "I leverage AI tools to accelerate development, but the architecture, logic, and craft are mine. I ship tools and automations that solve real problems - without over-engineering.",
     color: "#0ABFBC",
     bg: "rgba(10,191,188,0.08)",
     border: "rgba(10,191,188,0.15)",
-    metrics: ["Weekend projects", "AI-assisted", "Shipped, not planned"],
+    metrics: ["Clean architecture", "AI-accelerated", "Shipped, not planned"],
   },
   {
     icon: (

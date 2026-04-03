@@ -256,7 +256,7 @@ export default function Hero() {
               className="w-2 h-2 rounded-full animate-pulse-dot"
               style={{ background: "#C4B5FD", boxShadow: "0 0 10px #C4B5FD" }}
             />
-            Vibe-Coding Real Problems
+            Building Real Solutions
             <span className="text-[10px] opacity-60 font-mono" style={{ fontFamily: "var(--font-mono)" }}>
               khalidshaikh.dev
             </span>
@@ -301,16 +301,16 @@ export default function Hero() {
             marginTop: "2rem",
           }}
         >
-          Problems deserve solutions. Not meetings.{" "}
+          I build tools that solve real problems. Not just concepts.{" "}
           <span style={{ color: "rgba(255,255,255,0.6)" }}>
-            Vibe code. Ship. Repeat.
+            Ship. Iterate. Improve.
           </span>
         </p>
 
         <div className="animate-fade-up-3 flex flex-wrap justify-center gap-3 mt-10">
           {[
             { label: "🤖 AI Workflows", color: "#5EEAD4" },
-            { label: "🔧 Vibe-Coded", color: "#C4B5FD" },
+            { label: "🔧 Full-Stack Dev", color: "#C4B5FD" },
             { label: "🚀 Ship Fast", color: "#86EFAC" },
           ].map((tag) => (
             <span

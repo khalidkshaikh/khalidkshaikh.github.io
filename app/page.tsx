@@ -7,6 +7,7 @@ import WhatIBuild from "@/components/WhatIBuild";
 import BlogStrip from "@/components/BlogStrip";
 import ERPTeaser from "@/components/ERPTeaser";
 import Footer from "@/components/Footer";
+import ADLCSection from "@/components/ADLCSection";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <AIPulseShowcase />
         <ProductGrid />
         <WhatIBuild />
+        <ADLCSection />
         <BlogStrip />
         <ERPTeaser />
       </main>
