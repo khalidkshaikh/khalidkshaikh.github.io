@@ -50,7 +50,7 @@ export default function ERPTeaser() {
     
     const { error: supabaseError } = await supabase
       .from("erp_waitlist")
-      .upsert([{ email: email.trim(), created_at: new Date().toISOString() }], { onConflict: 'email', ignoreDuplicates: true });
+      .insert([{ email: email.trim() }]);
 
     setLoading(false);
     
