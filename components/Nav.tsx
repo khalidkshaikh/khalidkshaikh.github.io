@@ -5,10 +5,9 @@ import Link from "next/link";
 import Logo from "./Logo";
 
 const navLinks = [
-  { href: "#apps", label: "Apps" },
-  { href: "#tools", label: "Tools" },
+  { href: "/apps", label: "Apps" },
   { href: "#about", label: "About" },
-  { href: "#blog", label: "Blog" },
+  { href: "/blog", label: "Blog" },
 ];
 
 export default function Nav() {
