@@ -118,7 +118,7 @@ export default function AIPulseShowcase() {
               </div>
 
               <Link
-                href="https://xdrkzx1.github.io/neural-pulse/"
+                href="https://khalidkshaikh.github.io/neural-pulse/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary inline-flex"

@@ -4,11 +4,11 @@ import Link from "next/link";
 import Logo from "./Logo";
 
 const products = [
-  { label: "PDF Merger", href: "https://xdrkzx1.github.io/pdf-merger/" },
-  { label: "PDF Compressor", href: "https://xdrkzx1.github.io/pdf-compressor/" },
-  { label: "PDF Splitter", href: "https://xdrkzx1.github.io/pdf-splitter/" },
-  { label: "PDF Tools Hub", href: "https://xdrkzx1.github.io/pdf-tools-hub/" },
-  { label: "Neural Pulse", href: "https://xdrkzx1.github.io/neural-pulse/" },
+  { label: "PDF Merger", href: "https://khalidkshaikh.github.io/pdf-merger/" },
+  { label: "PDF Compressor", href: "https://khalidkshaikh.github.io/pdf-compressor/" },
+  { label: "PDF Splitter", href: "https://khalidkshaikh.github.io/pdf-splitter/" },
+  { label: "PDF Tools Hub", href: "https://khalidkshaikh.github.io/pdf-tools-hub/" },
+  { label: "Neural Pulse", href: "https://khalidkshaikh.github.io/neural-pulse/" },
   { label: "Storage Cleaner", href: "https://github.com/xdrkzx1/khalid-apps-releases/releases/download/v1.0.0/Storage_Cleaner_v1.0.0.apk" },
   { label: "Status Saver", href: "https://github.com/xdrkzx1/khalid-apps-releases/releases/download/v1.0.0/Status_Saver_v0.4.1.apk" },
   { label: "Card Optimizer", href: "https://github.com/xdrkzx1/khalid-apps-releases/releases/download/v1.0.0/FloatMax_v1.0.0.apk" },

@@ -4,11 +4,11 @@ import Link from "next/link";
 
 export default function ToolsPage() {
   const tools = [
-    { name: "PDF Merger", href: "https://xdrkzx1.github.io/pdf-merger/", desc: "Combine multiple PDFs into one. Zero uploads." },
-    { name: "PDF Compressor", href: "https://xdrkzx1.github.io/pdf-compressor/", desc: "Shrink PDF file sizes without losing quality." },
-    { name: "PDF Splitter", href: "https://xdrkzx1.github.io/pdf-splitter/", desc: "Extract individual pages from any PDF." },
-    { name: "PDF Tools Hub", href: "https://xdrkzx1.github.io/pdf-tools-hub/", desc: "All PDF tools in one place." },
-    { name: "Neural Pulse", href: "https://xdrkzx1.github.io/neural-pulse/", desc: "Automated AI & SAP intelligence news feed." },
+    { name: "PDF Merger", href: "https://khalidkshaikh.github.io/pdf-merger/", desc: "Combine multiple PDFs into one. Zero uploads." },
+    { name: "PDF Compressor", href: "https://khalidkshaikh.github.io/pdf-compressor/", desc: "Shrink PDF file sizes without losing quality." },
+    { name: "PDF Splitter", href: "https://khalidkshaikh.github.io/pdf-splitter/", desc: "Extract individual pages from any PDF." },
+    { name: "PDF Tools Hub", href: "https://khalidkshaikh.github.io/pdf-tools-hub/", desc: "All PDF tools in one place." },
+    { name: "Neural Pulse", href: "https://khalidkshaikh.github.io/neural-pulse/", desc: "Automated AI & SAP intelligence news feed." },
   ];
 
   return (
